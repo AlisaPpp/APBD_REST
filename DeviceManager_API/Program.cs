@@ -72,8 +72,7 @@ app.MapPost("/devices", (DeviceManager manager, DeviceDTO dto) =>
             IsTurnedOn = dto.IsTurnedOn,
             IpAddress = dto.IpAddress,
             NetworkName = dto.NetworkName
-        },
-        _ => null
+        }
     };
 
     if (device == null)
@@ -122,8 +121,7 @@ app.MapPut("/devices/{id}", (DeviceManager manager, string id, DeviceDTO dto) =>
             IsTurnedOn = dto.IsTurnedOn,
             IpAddress = dto.IpAddress,
             NetworkName = dto.NetworkName
-        },
-        _ => null
+        }
     };
 
     if (device == null)

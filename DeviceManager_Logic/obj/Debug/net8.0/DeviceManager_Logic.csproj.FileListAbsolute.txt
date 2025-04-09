@@ -13,3 +13,4 @@
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/refint/DeviceManager_Logic.dll
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.pdb
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/ref/DeviceManager_Logic.dll
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.sourcelink.json

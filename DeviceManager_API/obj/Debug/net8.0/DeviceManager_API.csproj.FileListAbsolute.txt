@@ -35,3 +35,4 @@
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_API/obj/Debug/net8.0/DeviceManager_API.pdb
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_API/obj/Debug/net8.0/DeviceManager_API.genruntimeconfig.cache
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_API/obj/Debug/net8.0/ref/DeviceManager_API.dll
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_API/obj/Debug/net8.0/DeviceManager_API.sourcelink.json

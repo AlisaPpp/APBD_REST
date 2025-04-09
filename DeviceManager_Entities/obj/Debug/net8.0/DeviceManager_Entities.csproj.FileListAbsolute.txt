@@ -9,3 +9,4 @@
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_Entities/obj/Debug/net8.0/refint/DeviceManager_Entities.dll
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_Entities/obj/Debug/net8.0/DeviceManager_Entities.pdb
 /Users/alice/RiderProjects/APBD_REST/DeviceManager_Entities/obj/Debug/net8.0/ref/DeviceManager_Entities.dll
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Entities/obj/Debug/net8.0/DeviceManager_Entities.sourcelink.json
