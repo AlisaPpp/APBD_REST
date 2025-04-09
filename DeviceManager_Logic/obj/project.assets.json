@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "DeviceManager_Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/DeviceManager_Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeviceManager_Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DeviceManager_Entities/1.0.0": {
+      "type": "project",
+      "path": "../DeviceManager_Entities/DeviceManager_Entities.csproj",
+      "msbuildProject": "../DeviceManager_Entities/DeviceManager_Entities.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "DeviceManager_Entities >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/alice/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/DeviceManager_Logic.csproj",
+      "projectName": "DeviceManager_Logic",
+      "projectPath": "/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/DeviceManager_Logic.csproj",
+      "packagesPath": "/Users/alice/.nuget/packages/",
+      "outputPath": "/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/alice/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/Users/alice/RiderProjects/APBD_REST/DeviceManager_Entities/DeviceManager_Entities.csproj": {
+              "projectPath": "/Users/alice/RiderProjects/APBD_REST/DeviceManager_Entities/DeviceManager_Entities.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/Users/alice/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

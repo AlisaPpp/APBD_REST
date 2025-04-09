@@ -1,0 +1,15 @@
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/bin/Debug/net8.0/DeviceManager_Logic.deps.json
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/bin/Debug/net8.0/DeviceManager_Logic.dll
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/bin/Debug/net8.0/DeviceManager_Logic.pdb
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/bin/Debug/net8.0/DeviceManager_Entities.dll
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/bin/Debug/net8.0/DeviceManager_Entities.pdb
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.csproj.AssemblyReference.cache
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.AssemblyInfoInputs.cache
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.AssemblyInfo.cs
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.csproj.CoreCompileInputs.cache
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceMa.BB16FC54.Up2Date
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.dll
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/refint/DeviceManager_Logic.dll
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/DeviceManager_Logic.pdb
+/Users/alice/RiderProjects/APBD_REST/DeviceManager_Logic/obj/Debug/net8.0/ref/DeviceManager_Logic.dll

@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DeviceManager_Logic/1.0.0": {
+        "dependencies": {
+          "DeviceManager_Entities": "1.0.0"
+        },
+        "runtime": {
+          "DeviceManager_Logic.dll": {}
+        }
+      },
+      "DeviceManager_Entities/1.0.0": {
+        "runtime": {
+          "DeviceManager_Entities.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DeviceManager_Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DeviceManager_Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
