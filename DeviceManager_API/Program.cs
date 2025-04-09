@@ -1,5 +1,3 @@
-using System.Reflection;
-
 using DeviceManager_Logic;
 using DeviceManager_Entities;
 
@@ -24,19 +22,7 @@ app.UseHttpsRedirection();
 //GetDevices
 app.MapGet("/devices", (DeviceManager manager) =>
 {
-    var deviceList = manager.GetDevices().Select(d =>
-    {
-        var properties = d.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
-        
-        var deviceInfo = properties.ToDictionary(
-            prop => prop.Name,  
-            prop => prop.GetValue(d) 
-        );
-        
-        return deviceInfo;
-    });
-
-    return Results.Ok(deviceList);
+    return Results.Ok(manager.GetDevices());
 });
 
 //GetDeviceById
