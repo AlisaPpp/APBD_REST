@@ -46,97 +46,112 @@ app.MapGet("/devices/{id}", (DeviceManager manager, string id) =>
     return device is null ? Results.NotFound() : Results.Ok(device);
 });
 
-//AddDevice
-app.MapPost("/devices", (DeviceManager manager, DeviceDTO dto) =>
+//AddDevices
+//AddSmartwatch
+app.MapPost("/devices/sw", (DeviceManager manager, Smartwatch watch) =>
 {
-    Device device = dto.Type switch
-    {
-        "Smartwatch" => new Smartwatch
-        {
-            Id = dto.Id,
-            Name = dto.Name,
-            IsTurnedOn = dto.IsTurnedOn,
-            BatteryLevel = dto.BatteryLevel ?? 10
-        },
-        "PersonalComputer" => new PersonalComputer
-        {
-            Id = dto.Id,
-            Name = dto.Name,
-            IsTurnedOn = dto.IsTurnedOn,
-            OperatingSystem = dto.OperatingSystem
-        },
-        "EmbeddedDevice" => new EmbeddedDevice
-        {
-            Id = dto.Id,
-            Name = dto.Name,
-            IsTurnedOn = dto.IsTurnedOn,
-            IpAddress = dto.IpAddress,
-            NetworkName = dto.NetworkName
-        }
-    };
-
-    if (device == null)
-        return Results.BadRequest("Invalid device type.");
-    
-    if (!DeviceManager.IsValidDeviceId(device))
-        return Results.BadRequest("Invalid device ID.");
+    if (!DeviceManager.IsValidDeviceId(watch))
+        return Results.BadRequest("Invalid device ID format for Smartwatch.");
 
     try
     {
-        manager.AddDevice(device);
-        return Results.Created($"/devices/{device.Id}", device);
+        manager.AddDevice(watch);
+        return Results.Created($"/devices/{watch.Id}", watch);
     }
-    catch (Exception e)
+    catch (Exception ex)
     {
-        return Results.BadRequest(e.Message);
+        return Results.BadRequest(ex.Message);
     }
 });
 
-//EditDevice
-app.MapPut("/devices/{id}", (DeviceManager manager, string id, DeviceDTO dto) =>
+//AddPersonalComputer
+app.MapPost("/devices/pc", (DeviceManager manager, PersonalComputer pc) =>
 {
-    if (dto.Id != id)
-        return Results.BadRequest("ID in the URL does not match any of the IDs");
-
-    Device device = dto.Type switch
-    {
-        "Smartwatch" => new Smartwatch
-        {
-            Id = dto.Id,
-            Name = dto.Name,
-            IsTurnedOn = dto.IsTurnedOn,
-            BatteryLevel = dto.BatteryLevel ?? 10
-        },
-        "PersonalComputer" => new PersonalComputer
-        {
-            Id = dto.Id,
-            Name = dto.Name,
-            IsTurnedOn = dto.IsTurnedOn,
-            OperatingSystem = dto.OperatingSystem
-        },
-        "EmbeddedDevice" => new EmbeddedDevice
-        {
-            Id = dto.Id,
-            Name = dto.Name,
-            IsTurnedOn = dto.IsTurnedOn,
-            IpAddress = dto.IpAddress,
-            NetworkName = dto.NetworkName
-        }
-    };
-
-    if (device == null)
-        return Results.BadRequest("Invalid device type.");
+    if (!DeviceManager.IsValidDeviceId(pc))
+        return Results.BadRequest("Invalid device ID format for PersonalComputer.");
 
     try
     {
-        manager.EditDevice(device);
-        return Results.Ok("Device updated successfully.");
+        manager.AddDevice(pc);
+        return Results.Created($"/devices/{pc.Id}", pc);
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest(ex.Message);
+    }
+});
+
+//AddEmbeddedDevice
+app.MapPost("/devices/ed", (DeviceManager manager, EmbeddedDevice ed) =>
+{
+    if (!DeviceManager.IsValidDeviceId(ed))
+        return Results.BadRequest("Invalid device ID format for EmbeddedDevice.");
+
+    try
+    {
+        manager.AddDevice(ed);
+        return Results.Created($"/devices/{ed.Id}", ed);
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest(ex.Message);
+    }
+});
+
+
+
+//EditDevice
+//EditSmartwatch
+app.MapPut("/devices/sw/{id}", (DeviceManager manager, string id, Smartwatch updatedDevice) =>
+{
+    if (updatedDevice.Id != id)
+        return Results.BadRequest("ID in the URL does not match the device ID.");
+
+    try
+    {
+        manager.EditDevice(updatedDevice);
+        return Results.Ok("Smartwatch updated successfully.");
     }
     catch (ArgumentException e)
     {
         return Results.BadRequest(e.Message);
     }
 });
+
+//EditPersonalComputer
+app.MapPut("/devices/pc/{id}", (DeviceManager manager, string id, PersonalComputer updatedDevice) =>
+{
+    if (updatedDevice.Id != id)
+        return Results.BadRequest("ID in the URL does not match the device ID.");
+
+    try
+    {
+        manager.EditDevice(updatedDevice);
+        return Results.Ok("PersonalComputer updated successfully.");
+    }
+    catch (ArgumentException e)
+    {
+        return Results.BadRequest(e.Message);
+    }
+});
+
+//EditEmbeddedDevice
+app.MapPut("/devices/ed/{id}", (DeviceManager manager, string id, EmbeddedDevice updatedDevice) =>
+{
+    if (updatedDevice.Id != id)
+        return Results.BadRequest("ID in the URL does not match the device ID.");
+
+    try
+    {
+        manager.EditDevice(updatedDevice);
+        return Results.Ok("EmbeddedDevice updated successfully.");
+    }
+    catch (ArgumentException e)
+    {
+        return Results.BadRequest(e.Message);
+    }
+});
+
 
 //RemoveDevice
 app.MapDelete("/devices/{id}", (DeviceManager manager, string id) =>

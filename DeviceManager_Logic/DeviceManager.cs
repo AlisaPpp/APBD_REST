@@ -98,7 +98,6 @@ public class DeviceManager
             Smartwatch => device.Id.StartsWith("SW-"),
             PersonalComputer => device.Id.StartsWith("P-"),
             EmbeddedDevice => device.Id.StartsWith("ED-"),
-            _ => false
         };
     }
 }
